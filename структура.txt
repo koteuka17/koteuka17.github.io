@@ -1,0 +1,18 @@
+magic-is-house/
+├── index.html                  # главная страница
+├── about.html                # о нас
+├── services.html             # услуги
+├── portfolio.html            # портфолио
+├── contact.html              # контакты
+├── css/
+│   ├── style.css             # основные стили
+│   └── responsive.css        # медиа‑запросы
+├── js/
+│   └── script.js             # общий JS‑код
+└── images/                   # все изображения
+    ├── hero-bg.jpg           # фон первого экрана
+    ├── about-studio.jpg      # фото для раздела «О нас»
+    ├── project-1.jpg         # проект 1
+    ├── project-2.jpg         # проект 2
+    ├── project-3.jpg         # проект 3
+    └── logo.png              # логотип
