@@ -1,0 +1,250 @@
+
+/* Для всех изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Фоновые изображения */
+.hero,
+.about-image img,
+.portfolio-item img {
+    background-size: cover;
+    object-fit: cover; /* для <img> */
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        align-items: flex-start; /* логотип и меню слева */
+        gap: 15px; /* отступ между элементами */
+    }
+
+    .nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        margin-top: 0;
+        height: auto;
+        padding: 100px 0;
+		background-attachment: scroll; /* фон прокручивается на мобильных */
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .services-grid,
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-text,
+    .about-image {
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .section-title {
+        font-size: 30px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 14px;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-secondary {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .header .container {
+        padding: 10px 15px;
+    }
+
+    .logo a {
+        font-size: 20px;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        padding: 20px 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        display: none; /* изначально скрыто */
+    }
+
+    .nav.active ul {
+        display: flex; /* показывается при активации */
+    }
+
+    .btn-request {
+        width: 100%;
+    }
+
+    .hero {
+        padding: 80px 0 60px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .project-info {
+        padding: 15px;
+    }
+
+    .project-info h3 {
+        font-size: 18px;
+    }
+
+    .project-info p {
+        font-size: 14px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .copyright p {
+        font-size: 12px;
+    }
+}
+
+/* Стили для мобильных устройств (очень маленькие экраны) */
+@media (max-width: 375px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .service-card,
+    .portfolio-item {
+        padding: 15px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card p,
+    .project-info p {
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+
+    .footer-column h3,
+    .footer-column h4 {
+        font-size: 18px;
+    }
+
+    .footer-column p {
+        font-size: 14px;
+    }
+}
+
+/* Ландшафтная ориентация на мобильных */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .services-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Для планшетов в портретной ориентации */
+@media (min-width: 769px) and (max-width: 992px) and (orientation: portrait) {
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .services-grid,
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+}
