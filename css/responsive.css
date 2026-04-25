@@ -14,6 +14,10 @@ img {
     object-fit: cover; /* для <img> */
 }
 
+.burger-menu {
+		display: none;
+	}
+
 @media (max-width: 992px) {
     .container {
         padding: 0 15px;
@@ -34,16 +38,66 @@ img {
 }
 
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        align-items: flex-start; /* логотип и меню слева */
+    .header .container .logo {
+		justify-content: space-between;
+        align-items: center; /* логотип и меню слева */
         gap: 15px; /* отступ между элементами */
+		display: flex;
     }
-
-    .nav ul {
-        gap: 15px;
+	
+	.container p {
+        display: none;
     }
+	
+	.nav {
+		display: none;
+	}
+	
+	.burger-menu {
+		display: block;
+		background: none;
+		border: none;
+		font-size: 24px;
+		cursor: pointer;
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		z-index: 1000;
+	}
 
+  /* Стили для активного меню (когда открыто) */
+	.nav.active {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		background: rgba(255, 255, 255, 0.5);
+		padding: 20px 0;
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+		z-index: 999;
+	}
+  
+    .nav.active ul {
+		flex-direction: column;
+		gap: 15px;
+		width: 100%;
+	}
+
+	.nav.active li {
+		text-align: center;
+	}
+
+	.nav.active a {
+		color: #333;
+		font-weight: 500;
+		display: block;
+		padding: 10px 20px;
+		text-decoration: none;
+		text-align: center;
+	}
+	
     .hero {
         margin-top: 0;
         height: auto;
@@ -88,75 +142,6 @@ img {
 
     .btn-secondary {
         margin-top: 20px;
-    }
-}
-
-@media (max-width: 576px) {
-    .header .container {
-        padding: 10px 15px;
-    }
-
-    .logo a {
-        font-size: 20px;
-    }
-
-    .nav ul {
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        padding: 20px 0;
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-        display: none; /* изначально скрыто */
-    }
-
-    .nav.active ul {
-        display: flex; /* показывается при активации */
-    }
-
-    .btn-request {
-        width: 100%;
-    }
-
-    .hero {
-        padding: 80px 0 60px;
-    }
-
-    .hero h1 {
-        font-size: 24px;
-        line-height: 1.2;
-    }
-
-    .hero p {
-        font-size: 16px;
-        line-height: 1.4;
-    }
-
-    .project-info {
-        padding: 15px;
-    }
-
-    .project-info h3 {
-        font-size: 18px;
-    }
-
-    .project-info p {
-        font-size: 14px;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .social-links {
-        justify-content: center;
-    }
-
-    .copyright p {
-        font-size: 12px;
     }
 }
 

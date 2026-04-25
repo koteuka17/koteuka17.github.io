@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     menuToggle.addEventListener('click', function() {
         nav.classList.toggle('active');
     });
-
+	
     // Закрытие меню при клике на ссылку
     document.querySelectorAll('.nav a').forEach(link => {
         link.addEventListener('click', () => {
@@ -30,4 +30,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+	const burgerMenu = document.querySelector('.burger-menu');
+	const nav = document.querySelector('.nav');
+
+	burgerMenu.addEventListener('click', function(e) {
+	e.stopPropagation();
+	nav.classList.toggle('active');
+	});
+
+	// Закрытие меню при клике вне его области
+	document.addEventListener('click', function(e) {
+		if (!nav.contains(e.target) && e.target !== burgerMenu) {
+			nav.classList.remove('active');
+		}
+	});
 });
