@@ -173,6 +173,47 @@ body {
 	color: black;
 }
 
+.hero1 {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ),
+	background-color: #333; /* если изображение не загрузится */
+    background-image: url('../images/hero-bg.jpg');
+    url('../images/hero-bg.jpg') center/cover no-repeat;
+    display: flex;
+	justify-content: center; /* горизонтальное центрирование */
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin-top: 80px; /* высота шапки */
+}
+
+.hero1 h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: 100;
+	color: black; /* цвет заголовка — чёрный */
+}
+
+.hero1 p {
+    font-size: 24px;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+	color: black;
+}
+
+.container0 {
+    background:
+        linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.2));
+    padding: 50px; /* отступы вокруг текста */
+    border-radius: 15px; /* скругление углов */
+    text-align: center; /* выравнивание текста по центру */
+
+}
+
 .container2 {
     background:
         linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)), /* полупрозрачная белая подложка */
@@ -180,6 +221,7 @@ body {
     padding: 50px; /* отступы вокруг текста */
     border-radius: 15px; /* скругление углов */
     text-align: center; /* выравнивание текста по центру */
+
 }
 
 .container3 {
@@ -439,4 +481,17 @@ body {
     color: #ffffff;
     border: 6px solid #ffffff;
     transition: all 0.5s ease; /* плавная анимация 1 секунда */
+}
+
+.image-link {
+    text-decoration: none; /* Убираем подчёркивание ссылки */
+    display: inline-block; /* Чтобы отступы работали корректно */
+}
+
+.clickable-image {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 8px; /* Закруглённые углы */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
